@@ -1,7 +1,7 @@
 module.exports = function(app){
 
   app.get("/",function(req,res){
-    res.sendFile("../views/index.html");
-  }
+    res.sendFile("C:/Users/ahuan/documents/univinfo/views/index.html");
+  })
 
 }
