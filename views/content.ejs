@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UnivInfo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type = "text/css" rel = "stylesheet" href = "./../public/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./../public/content.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">UnivInfo</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/universities">UNIVERSITIES</a></li>
+          <li><a href="/programs">PROGRAMS</a></li>
+          <li><a href="/residences">RESIDENCES</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="container-fluid" style="padding-top:1vh">
+  <div class="jumbotron">
+    <h1 id="title"><%=qs.university%></h1>
+  </div>
+  <div>
+    <p><%=qs.univ_id%></p>
+  </div>
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>Contents</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li id="homeBtn" class="active" onclick = "goHome()"><a href="#section1">Home</a></li>
+        <li id="reviewBtn" onclick = "goReviews()"><a  href="#section1">Reviews</a></li>
+        <li id="programBtn" onclick = "goPrograms()"><a href="#section2">Programs</a></li>
+        <li><a href="#section3">Residences</a></li>
+        <li><a href="#section3">Ask a Question</a></li>
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <!-- Home Content -->
+    <div id="home">
+      <div class="col-sm-9">
+        <h2>Overview</h2>
+        <p>The university is co-educational, and as of 2016 has 30,600 undergraduate and 5,300 postgraduate students.[3] Alumni and former students of the university can be found across Canada and in over 140 countries.[11] The university ranked 152nd in the 2018 QS World University Rankings,[16] 201–250 in the 2018 Times Higher Education World University Rankings,[17] 201–300 in the 2017 Academic Ranking of World Universities,[18] and 240th in the 2017 U.S. News & World Report university rankings.[19] Waterloo's varsity teams, known as the Waterloo Warriors, compete in the Ontario University Athletics conference of the U Sports.</p>
+        <h2>Famous For...</h2>
+        <p>Academically, the University of Toronto is noted for influential movements and curricula in literary criticism and communication theory, known collectively as the Toronto School. The university was the birthplace of insulin and stem cell research, and was the site of the first practical electron microscope, the development of multi-touch technology, the identification of the first black hole Cygnus X-1, and the development of the theory of NP-completeness. By a significant margin, it receives the most annual scientific research funding of any Canadian university. It is one of two members of the Association of American Universities outside the United States, the other being McGill University in Montreal, Quebec.[6]</p>
+        <h2>More Information</h2>
+        <p>Several programs from the university placed in the 2011 Corporate Knights rankings, which measures how well Canadian universities integrate sustainability into their curriculum. Telfer School of Management ranked fifth in Canada for undergraduate business programs. The Corporate Knights also ranked Telfer eighth in Canada for MBA program. The University of Ottawa has implemented a variety of activities in order to increase sustainability across campus. The university has been working on creating a more sustainable campus through the efforts of the Office of Campus Sustainability.</p>
+      </div>
+    </div>
+
+    <!-- Reviews Section. -->
+    <div id="reviews" class="wrapper1">
+      <div class="col-sm-9">
+        <h4><small>RECENT POSTS</small></h4>
+        <hr>
+
+        <h2>Tough, but doable</h2>
+        <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5>
+        <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
+        <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <br><br>
+
+        <h4><small>RECENT POSTS</small></h4>
+        <hr>
+
+        <h2>U of T is hell</h2>
+        <h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5>
+        <h5><span class="label label-success">Lorem</span></h5><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <hr>
+
+        <h4>Leave a Comment:</h4>
+        <form role="form">
+          <div class="form-group">
+            <textarea class="form-control" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        <br><br>
+
+        <p><span class="badge">2</span> Comments:</p><br>
+
+        <div class="row">
+          <div class="col-sm-2 text-center">
+            <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+          </div>
+          <div class="col-sm-10">
+            <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
+            <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <br>
+          </div>
+          <div class="col-sm-2 text-center">
+            <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+          </div>
+          <div class="col-sm-10">
+            <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
+            <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <br>
+            <p><span class="badge">1</span> Comment:</p><br>
+            <div class="row">
+              <div class="col-sm-2 text-center">
+                <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+              </div>
+              <div class="col-xs-10">
+                <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
+                <p>Me too! WOW!</p>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="programs" class="wrapper1">
+      <div id="progList" class="col-sm-9">
+        <h2>List Of Programs</h2>
+        <ul id="progList">
+
+        </ul>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p>Footer Text</p>
+</footer>
+
+
+</body>
+</html>

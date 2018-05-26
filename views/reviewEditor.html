@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UnivInfo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type = "text/css" rel = "stylesheet" href = "./../public/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./../public/reviewEditor.js"></script>
+</head>
+<body>
+  <div style="width:65%; margin:auto; margin-top:15vh">
+
+    <h1>Review Editor</h1>
+    <p>When writing a review, remember that the more context your review has, the more valu able it will be. Try to be unbiased as much as possible, and write honestly.</p>
+    <br>
+
+    <form>
+        <label for="comment">Title:</label>
+        <input class="form-control" style ="width:30%" type="text" placeholder="Title">
+
+        <br>
+
+        <div class="form-group">
+          <label for="comment">Review:</label>
+          <textarea class="form-control" rows="5" id="comment" placeholder="Review"></textarea>
+        </div>
+
+      <label for="comment">Topics: </label>
+      <label class="checkbox-inline"><input type="checkbox" value="">Academics</label>
+      <label class="checkbox-inline"><input type="checkbox" value="">Student Life</label>
+      <label class="checkbox-inline"><input type="checkbox" value="">Clubs</label>
+      <br>
+      <br>
+      <input type="submit" class="btn" value="Submit Review">
+
+      </form>
+
+  </div>
+</body>
+</html>
